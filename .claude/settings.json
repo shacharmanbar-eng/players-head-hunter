@@ -1,0 +1,17 @@
+{
+  "model": "claude-sonnet-5-5",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "powershell",
+            "command": "powershell -NoProfile -ExecutionPolicy Bypass -File \"$env:CLAUDE_PROJECT_DIR\\.claude\\hooks\\log-to-obsidian.ps1\"",
+            "timeout": 15
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Players Head Hunter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Players Head Hunter</h1>
+    <p>Rate what your team needs (1 = not important, 5 = critical) and get the best-fitting players.</p>
+  </header>
+
+  <main>
+    <section class="panel" aria-label="Team needs">
+      <h2>Team needs</h2>
+      <div id="needs"></div>
+
+      <div class="filters">
+        <label>Position
+          <select id="f-pos">
+            <option value="">Any</option><option>PG</option><option>SG</option><option>SF</option><option>PF</option><option>C</option>
+          </select>
+        </label>
+        <label>League
+          <select id="f-league">
+            <option value="">Any</option><option>EuroLeague</option><option>Israeli league</option>
+          </select>
+        </label>
+        <label>Age from <input type="number" id="f-age-min" min="16" max="45" placeholder="18"></label>
+        <label>Age to <input type="number" id="f-age-max" min="16" max="45" placeholder="40"></label>
+        <label>Height from (cm) <input type="number" id="f-h-min" min="160" max="230" placeholder="180"></label>
+        <label>Height to (cm) <input type="number" id="f-h-max" min="160" max="230" placeholder="220"></label>
+      </div>
+      <p class="note">Prototype: players below are fictional sample data. Real data from the EuroLeague and Israeli league comes next.</p>
+    </section>
+
+    <section aria-label="Recommended players">
+      <h2>Recommended players</h2>
+      <div id="results"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
